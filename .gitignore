@@ -1,8 +1,0 @@
-__pycache__/
-*.pyc
-.ipynb_checkpoints
-writer/.ipynb_checkpoints
-sourcer/.ipynb_checkpoints
-writer/__pycache__/
-sourcer__pycache__/
-.gitignore
