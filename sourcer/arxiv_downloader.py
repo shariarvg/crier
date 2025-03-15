@@ -1,10 +1,10 @@
 import arxiv
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 def get_pdf_urls(doc_ids, days = 5):
     recent_pdfs = []
     recent_dates = []
-    cutoff_date = datetime.now() - timedelta(days=days)
+    cutoff_date = datetime.now(timezone.utc) - timedelta(days=days)
 
     for doc_id in doc_ids:
         search = arxiv.Search(id_list=[doc_id])
@@ -32,7 +32,6 @@ def download_pdf(pdf_url, save_path):
 
 def get_pdfs(doc_ids, root = "../"):
     urls, dates = get_pdf_urls(doc_ids)
-    urls = urls[dates > 
     filenames = [root+'crier_input_pdfs/' + doc_id + '.pdf' for doc_id in doc_ids]
     for url, filename in zip(urls, filenames):
         download_pdf(url, filename)
