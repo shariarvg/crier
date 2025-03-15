@@ -11,4 +11,4 @@ To-do
 * Incorporate other publication venues (besides arXiv)
 * Other approach: just scrape from arXiv directly and have another assistant that chooses the coolest headline to focus on
 * Improve the prompt so the article styles are cool. Alternative approach: write a list of prompts to choose from so style differs by day
-* Automate the newsletter part
+* Allow the newsletter to send rich text
